@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
     public int maxHealth = 100;
     public int currentHealth = 100;
+    public Text healthText;
+
+    void Start ()
+    {
+        healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+    }
 
     public void AddHealth(int amount)
     {
@@ -13,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+        healthText.text = "HP: " + currentHealth + "/" + maxHealth;
     }
 
     public void RemoveHealth(int amount)
@@ -22,5 +29,6 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = 0;
         }
+        healthText.text = "HP: " + currentHealth + "/" + maxHealth;
     }
 }

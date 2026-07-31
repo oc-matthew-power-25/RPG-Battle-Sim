@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4acab18569a55506984bff718a5d63dd, type: 3}
-  m_Name: StarStrike
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackObject
+  m_Script: {fileID: 11500000, guid: cc60393b34a3e7d2e94d0dbece4dc7bd, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackObject
   accuracy: 0.8
-  baseDamage: 35
-  criticalChance: 0
-  type: Magic
+  baseDamage: 15
+  criticalChance: 0.2
+  type: Melee

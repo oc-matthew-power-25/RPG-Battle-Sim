@@ -7,6 +7,7 @@ public class PlayerAttack : MonoBehaviour
     private PlayerAttackObject activeAttackObject;
     public EnemyHealth enemyHealth;
     public float criticalMultiplier = 2f;
+    public GameManager gameManager;
 
     public void UseAttack(int attackIndex)
     {
@@ -16,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
             return;
         }
 
+        if (!gameManager.playerCanAttack) return;
+
         activeAttackObject = attackObjects[attackIndex];
 
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
@@ -24,13 +27,16 @@ public class PlayerAttack : MonoBehaviour
             if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
             {
                 // Critical hit
-                Debug.Log("Critical hit! " + (activeAttackObject.baseDamage * criticalMultiplier) + " damage dealt.");
-                enemyHealth.RemoveHealth((int)(float)(activeAttackObject.baseDamage * criticalMultiplier));
+                int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
+                Debug.Log("Critical hit! " + damage + " damage dealt.");
+                gameManager.UpdateLog("Critical hit! " + damage + " damage dealt.");
+                enemyHealth.RemoveHealth(damage);
             }
             else
             {
                 // Normal hit
                 Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
+                gameManager.UpdateLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
                 enemyHealth.RemoveHealth(activeAttackObject.baseDamage);
             }
         }
@@ -38,8 +44,9 @@ public class PlayerAttack : MonoBehaviour
         {
             // Attack misses
             Debug.Log("Attack misses!");
+            gameManager.UpdateLog("Attack misses!");
         }
 
-        FindAnyObjectByType<GameManager>().EndPlayerTurn();
+        gameManager.EndPlayerTurn();
     }
 }

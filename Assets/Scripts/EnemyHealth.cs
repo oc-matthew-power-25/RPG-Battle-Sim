@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 100;
     public Text healthText;
+    public GameManager gameManager;
 
     void Start ()
     {
@@ -30,5 +31,16 @@ public class EnemyHealth : MonoBehaviour
             currentHealth = 0;
         }
         healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+        
+        if(currentHealth <= 0)
+        {
+            OnDeath();
+        }
+    }
+
+    void OnDeath()
+    {
+        gameManager.UpdateLog("You Won.");
+        Time.timeScale = 0f;
     }
 }

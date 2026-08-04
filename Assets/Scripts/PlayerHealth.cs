@@ -6,10 +6,12 @@ public class PlayerHealth : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth = 100;
     public Text healthText;
+    public GameManager gameManager;
 
     void Start ()
     {
         healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+        Time.timeScale = 1;
     }
 
     public void AddHealth(int amount)
@@ -30,5 +32,15 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
         }
         healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+        if (currentHealth <= 0)
+        {
+            OnDeath();
+        }
+    }
+
+    void OnDeath()
+    {
+        gameManager.UpdateLog("You Lost.");
+        Time.timeScale = 0f;
     }
 }

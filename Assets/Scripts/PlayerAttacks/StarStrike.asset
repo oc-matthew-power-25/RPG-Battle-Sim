@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acab18569a55506984bff718a5d63dd, type: 3}
   m_Name: StarStrike
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackObject
-  accuracy: 0.8
+  accuracy: 0.6
   baseDamage: 25
-  criticalChance: 0
+  criticalChance: 0.2
   type: Magic

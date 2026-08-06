@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public bool isPlayerTurn = true;
     public bool playerCanAttack = true;
+    public GameObject playerAttackButtons;
 
     public bool isCooldown = false;
     public float cooldownLength = 1f;
@@ -43,6 +44,15 @@ public class GameManager : MonoBehaviour
             {
                 logText.text = "";
             }
+        }
+
+        if(playerCanAttack && !playerAttackButtons.activeSelf)
+        {
+            playerAttackButtons.SetActive(true);
+        }
+        if(!playerCanAttack && playerAttackButtons.activeSelf)
+        {
+            playerAttackButtons.SetActive(false);
         }
     }
 

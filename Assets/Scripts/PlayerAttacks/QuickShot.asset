@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc60393b34a3e7d2e94d0dbece4dc7bd, type: 3}
-  m_Name: Right Hook
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackObject
-  accuracy: 0.65
-  baseDamage: 25
-  criticalChance: 0.15
-  type: Melee
+  m_Script: {fileID: 11500000, guid: 4acab18569a55506984bff718a5d63dd, type: 3}
+  m_Name: QuickShot
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAttackObject
+  accuracy: 1
+  baseDamage: 15
+  criticalChance: 0.5
+  type: Ranged

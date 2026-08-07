@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +14,7 @@ public class GameManager : MonoBehaviour
     private float turnTimer = 0f;
 
     public Text logText;
+    public List<String> textQueue;
     public float textCooldown = 0.75f;
     private float textElapsed = 0f;
 
@@ -37,10 +40,16 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(logText.text != "")
+        textElapsed += Time.deltaTime;
+        if(textElapsed > textCooldown)
         {
-            textElapsed += Time.deltaTime;
-            if(textElapsed > textCooldown)
+            if(textQueue.Count > 0)
+            {
+                logText.text = textQueue[0];
+                textQueue.RemoveAt(0);
+                textElapsed = 0f;
+            }
+            else
             {
                 logText.text = "";
             }
@@ -86,9 +95,8 @@ public class GameManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    public void UpdateLog(string text)
+    public void QueueLog(string text)
     {
-        logText.text = text;
-        textElapsed = 0f;
+        textQueue.Add(text);
     }
 }

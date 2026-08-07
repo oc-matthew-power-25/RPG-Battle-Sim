@@ -29,14 +29,14 @@ public class PlayerAttack : MonoBehaviour
                 // Critical hit
                 int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
                 Debug.Log("Critical hit! " + damage + " damage dealt.");
-                gameManager.UpdateLog("Critical hit! " + damage + " damage dealt.");
+                gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
                 enemyHealth.RemoveHealth(damage);
             }
             else
             {
                 // Normal hit
                 Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                gameManager.UpdateLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
+                gameManager.QueueLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
                 enemyHealth.RemoveHealth(activeAttackObject.baseDamage);
             }
         }
@@ -44,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
         {
             // Attack misses
             Debug.Log("Attack misses!");
-            gameManager.UpdateLog("Attack misses!");
+            gameManager.QueueLog("Attack misses!");
         }
 
         gameManager.EndPlayerTurn();

@@ -17,3 +17,4 @@ MonoBehaviour:
   criticalChance: 0.2
   type: Melee
   attackName: Jump
+  funFact: Kangaroos can jump up to 3m high.

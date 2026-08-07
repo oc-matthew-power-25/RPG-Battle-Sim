@@ -8,4 +8,5 @@ public class EnemyAttackObject : ScriptableObject
     public float criticalChance = 0.1f; // 10% chance for critical hit
     public string type = "Melee"; // Type of attack (e.g., Melee, Ranged, Magic)
     public string attackName = "Bite";
+    public string funFact = "";
 }

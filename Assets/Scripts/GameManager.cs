@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         if (isCooldown)
         {
             turnTimer += Time.deltaTime;
-            if(turnTimer > cooldownLength)
+            if(turnTimer > cooldownLength && logText.text == "")
             {
                 if (isPlayerTurn)
                 {

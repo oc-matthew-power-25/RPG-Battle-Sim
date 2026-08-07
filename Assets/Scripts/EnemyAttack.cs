@@ -16,6 +16,7 @@ public class EnemyAttack : MonoBehaviour
         activeAttackObject = attackObjects[attackIndex];
 
         gameManager.QueueLog("Enemy Used " + activeAttackObject.attackName + "!");
+        gameManager.QueueLog(activeAttackObject.funFact);
 
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
         {

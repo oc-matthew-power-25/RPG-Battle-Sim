@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc60393b34a3e7d2e94d0dbece4dc7bd, type: 3}
-  m_Name: Right Hook
+  m_Name: Hind Kick
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackObject
   accuracy: 0.65
   baseDamage: 25
   criticalChance: 0.15
   type: Melee
-  attackName: Right Hook
+  attackName: Hind Kick
+  funFact: Kangaroos can kick with around 760 pounds of force.

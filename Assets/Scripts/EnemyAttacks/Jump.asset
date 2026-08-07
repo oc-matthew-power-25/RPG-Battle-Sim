@@ -16,3 +16,4 @@ MonoBehaviour:
   baseDamage: 20
   criticalChance: 0.2
   type: Melee
+  attackName: Jump

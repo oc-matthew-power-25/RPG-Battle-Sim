@@ -41,6 +41,6 @@ public class PlayerHealth : MonoBehaviour
     void OnDeath()
     {
         gameManager.QueueLog("You Lost.");
-        Time.timeScale = 0f;
+        gameManager.endQueued = true;
     }
 }

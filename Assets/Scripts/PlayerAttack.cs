@@ -21,6 +21,8 @@ public class PlayerAttack : MonoBehaviour
 
         activeAttackObject = attackObjects[attackIndex];
 
+        gameManager.QueueLog("Player Used " + activeAttackObject.attackName + "!");
+
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
         {
             // Attack hits
@@ -44,7 +46,7 @@ public class PlayerAttack : MonoBehaviour
         {
             // Attack misses
             Debug.Log("Attack misses!");
-            gameManager.QueueLog("Attack misses!");
+            gameManager.QueueLog("Attack misses! 0 damage dealt.");
         }
 
         gameManager.EndPlayerTurn();

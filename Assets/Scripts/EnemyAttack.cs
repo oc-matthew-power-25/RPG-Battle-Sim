@@ -15,6 +15,8 @@ public class EnemyAttack : MonoBehaviour
 
         activeAttackObject = attackObjects[attackIndex];
 
+        gameManager.QueueLog("Enemy Used " + activeAttackObject.attackName + "!");
+
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
         {
             // Attack hits
@@ -38,7 +40,7 @@ public class EnemyAttack : MonoBehaviour
         {
             // Attack misses
             Debug.Log("Attack misses!");
-            gameManager.QueueLog("Attack misses!");
+            gameManager.QueueLog("Attack misses! 0 damage dealt.");
         }
 
         gameManager.EndEnemyTurn();

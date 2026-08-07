@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float textCooldown = 0.75f;
     private float textElapsed = 0f;
 
+    public bool endQueued = false;
+
     void Update()
     {
         if (isCooldown)
@@ -48,6 +50,11 @@ public class GameManager : MonoBehaviour
                 logText.text = textQueue[0];
                 textQueue.RemoveAt(0);
                 textElapsed = 0f;
+
+                if(textQueue.Count == 0 && endQueued)
+                {
+                    Time.timeScale = 0f;
+                }
             }
             else
             {

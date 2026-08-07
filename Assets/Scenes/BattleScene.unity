@@ -244,7 +244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &242316370
 RectTransform:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -540, y: 360}
+  m_AnchoredPosition: {x: -680, y: 180}
   m_SizeDelta: {x: 440, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297586226
@@ -486,9 +486,11 @@ MonoBehaviour:
   playerCanAttack: 1
   playerAttackButtons: {fileID: 1928633058}
   isCooldown: 0
-  cooldownLength: 1
+  cooldownLength: 3.5
   logText: {fileID: 1227614764}
-  textCooldown: 0.75
+  textQueue: []
+  textCooldown: 1.5
+  endQueued: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,7 +1224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Used Spear Charge!
+  m_Text: 
 --- !u!222 &1227614765
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1650,7 +1652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: 360}
+  m_AnchoredPosition: {x: 580, y: 180}
   m_SizeDelta: {x: 440, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568206542
@@ -1994,7 +1996,7 @@ GameObject:
   - component: {fileID: 1802165100}
   - component: {fileID: 1802165099}
   m_Layer: 0
-  m_Name: Backgroun
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

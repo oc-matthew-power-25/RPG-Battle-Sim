@@ -16,3 +16,4 @@ MonoBehaviour:
   baseDamage: 15
   criticalChance: 0.5
   type: Ranged
+  attackName: Quick Shot

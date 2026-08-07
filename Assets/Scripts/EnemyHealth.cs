@@ -41,6 +41,6 @@ public class EnemyHealth : MonoBehaviour
     void OnDeath()
     {
         gameManager.QueueLog("You Won.");
-        Time.timeScale = 0f;
+        gameManager.endQueued = true;
     }
 }

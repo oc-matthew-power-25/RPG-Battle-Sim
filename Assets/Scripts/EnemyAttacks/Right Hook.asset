@@ -16,3 +16,4 @@ MonoBehaviour:
   baseDamage: 25
   criticalChance: 0.15
   type: Melee
+  attackName: Right Hook

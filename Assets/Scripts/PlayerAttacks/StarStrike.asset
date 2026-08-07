@@ -16,3 +16,4 @@ MonoBehaviour:
   baseDamage: 25
   criticalChance: 0.2
   type: Magic
+  attackName: Star Strike

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -9,51 +10,45 @@ public class GameManager : MonoBehaviour
     public bool playerCanAttack = true;
     public GameObject playerAttackButtons;
 
-    public bool isCooldown = false;
-    public float cooldownLength = 1f;
-    private float turnTimer = 0f;
-
     public Text logText;
     public List<String> textQueue;
-    public float textCooldown = 0.75f;
-    private float textElapsed = 0f;
-
     public bool endQueued = false;
+    private bool isEnd;
 
     void Update()
     {
-        if (isCooldown)
+
+        if(logText.text == "" && textQueue.Count > 0)
         {
-            turnTimer += Time.deltaTime;
-            if(turnTimer > cooldownLength && logText.text == "")
+                logText.transform.GetChild(0).gameObject.SetActive(true);
+            logText.text = textQueue[0];
+            textQueue.RemoveAt(0);
+        }
+
+        if(logText.text == "" && textQueue.Count <= 0)
+        {
+            logText.transform.GetChild(0).gameObject.SetActive(false);
+            if (isPlayerTurn && !playerCanAttack)
             {
-                if (isPlayerTurn)
-                {
-                    turnTimer = 0f;
-                    isCooldown = false;
-                    StartEnemyTurn();
-                }
-                else
-                {
-                    turnTimer = 0f;
-                    isCooldown = false;
-                    StartPlayerTurn();
-                }
+                StartEnemyTurn();
+            }
+            else
+            {
+                StartPlayerTurn();
             }
         }
 
-        textElapsed += Time.deltaTime;
-        if(textElapsed > textCooldown)
+        if((Keyboard.current.spaceKey.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame) && !isEnd)
         {
             if(textQueue.Count > 0)
             {
                 logText.text = textQueue[0];
                 textQueue.RemoveAt(0);
-                textElapsed = 0f;
 
                 if(textQueue.Count == 0 && endQueued)
                 {
                     Time.timeScale = 0f;
+                    isEnd = true;
                 }
             }
             else
@@ -75,12 +70,11 @@ public class GameManager : MonoBehaviour
     public void EndPlayerTurn()
     {
         playerCanAttack = false;
-        isCooldown = true;
     }
 
     public void EndEnemyTurn()
     {
-        isCooldown = true;
+        
     }
 
     public void StartPlayerTurn()

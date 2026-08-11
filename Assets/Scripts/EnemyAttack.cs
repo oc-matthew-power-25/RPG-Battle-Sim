@@ -4,10 +4,19 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     public List<EnemyAttackObject> attackObjects;
+    public List<bool> factsSaid;
     private EnemyAttackObject activeAttackObject;
     public PlayerHealth playerHealth;
     public float criticalMultiplier = 2f;
     public GameManager gameManager;
+
+    void Start()
+    {
+        for (int i = 0; i < attackObjects.Count; i++)
+        {
+            factsSaid.Add(false);
+        }
+    }
 
     public void UseAttack()
     {
@@ -16,7 +25,10 @@ public class EnemyAttack : MonoBehaviour
         activeAttackObject = attackObjects[attackIndex];
 
         gameManager.QueueLog("Enemy Used " + activeAttackObject.attackName + "!");
-        gameManager.QueueLog(activeAttackObject.funFact);
+        if(!factsSaid[attackIndex]){
+            gameManager.QueueLog(activeAttackObject.funFact);
+            factsSaid[attackIndex] = true;
+        }
 
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
         {

@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
                 if(textQueue.Count == 0 && endQueued)
                 {
                     Time.timeScale = 0f;
+                    logText.transform.GetChild(0).gameObject.SetActive(false);
                     isEnd = true;
                 }
             }

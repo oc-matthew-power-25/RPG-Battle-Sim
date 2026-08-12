@@ -30,6 +30,11 @@ public class EnemyAttack : MonoBehaviour
             factsSaid[attackIndex] = true;
         }
 
+        if(activeAttackObject.animation != null)
+        {
+            activeAttackObject.animation.Play();
+        }
+
         if (Random.Range(0,1f) <= activeAttackObject.accuracy)
         {
             // Attack hits

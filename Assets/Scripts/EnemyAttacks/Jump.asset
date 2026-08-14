@@ -15,6 +15,6 @@ MonoBehaviour:
   accuracy: 0.8
   baseDamage: 20
   criticalChance: 0.2
-  type: Melee
+  type: Ranged
   attackName: Jump
   funFact: Kangaroos can jump up to 3m high.

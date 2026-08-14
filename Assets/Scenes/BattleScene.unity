@@ -879,7 +879,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.5
-  m_Text: Spear Charge
+  m_Text: Sword Slash
 --- !u!222 &767314073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -900,6 +900,7 @@ GameObject:
   - component: {fileID: 772589937}
   - component: {fileID: 772589939}
   - component: {fileID: 772589940}
+  - component: {fileID: 772589941}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -956,7 +957,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5479864878087252051, guid: a1f9177fd8a3cd3cebf40060236cf7ea, type: 3}
+  m_Sprite: {fileID: -8823480953551597020, guid: 0d272c3b35e680caa8fa8e3b3cf9308e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -976,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 772589936}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -1, z: 0}
+  m_LocalPosition: {x: -6, y: -1.5, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1017,6 +1018,29 @@ MonoBehaviour:
   enemyHealth: {fileID: 1655943630}
   criticalMultiplier: 1.6
   gameManager: {fileID: 349565021}
+  inAttack: 0
+--- !u!95 &772589941
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772589936}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1d24792877fcc2e09b929a3f63fde559, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &937878061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,8 +2011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackObjects:
-  - {fileID: 11400000, guid: ca4e32f2a28e7efc69ce2079f26d6e11, type: 2}
   - {fileID: 11400000, guid: 768795c07c15838a89f91e8b25719956, type: 2}
+  - {fileID: 11400000, guid: ca4e32f2a28e7efc69ce2079f26d6e11, type: 2}
   factsSaid: 
   playerHealth: {fileID: 772589939}
   criticalMultiplier: 1.6
@@ -2003,7 +2027,7 @@ Animator:
   m_GameObject: {fileID: 1655943627}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de477da80a5c4db86b3cc439dd4b4934, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4b165ff342bd70e9fb65ec82bf0d48f8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2317,7 +2341,7 @@ GameObject:
   - component: {fileID: 1992250685}
   - component: {fileID: 1992250684}
   m_Layer: 5
-  m_Name: Spear Charge
+  m_Name: Sword Slash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

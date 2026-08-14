@@ -28,11 +28,11 @@ public class GameManager : MonoBehaviour
         if(logText.text == "" && textQueue.Count <= 0)
         {
             logText.transform.GetChild(0).gameObject.SetActive(false);
-            if (isPlayerTurn && !playerCanAttack)
+            if (isPlayerTurn && !playerCanAttack && FindAnyObjectByType<PlayerAttack>().inAttack == false && FindAnyObjectByType<EnemyAttack>().inAttack == false)
             {
                 StartEnemyTurn();
             }
-            else
+            else if(FindAnyObjectByType<PlayerAttack>().inAttack == false && FindAnyObjectByType<EnemyAttack>().inAttack == false)
             {
                 StartPlayerTurn();
             }
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if(playerCanAttack && !playerAttackButtons.activeSelf)
+        if(playerCanAttack && !playerAttackButtons.activeSelf && FindAnyObjectByType<PlayerAttack>().inAttack == false && FindAnyObjectByType<EnemyAttack>().inAttack == false)
         {
             playerAttackButtons.SetActive(true);
         }
@@ -66,16 +66,6 @@ public class GameManager : MonoBehaviour
         {
             playerAttackButtons.SetActive(false);
         }
-    }
-
-    public void EndPlayerTurn()
-    {
-        playerCanAttack = false;
-    }
-
-    public void EndEnemyTurn()
-    {
-        
     }
 
     public void StartPlayerTurn()

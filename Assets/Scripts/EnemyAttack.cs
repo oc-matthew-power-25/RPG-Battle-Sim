@@ -9,6 +9,8 @@ public class EnemyAttack : MonoBehaviour
     public PlayerHealth playerHealth;
     public float criticalMultiplier = 2f;
     public GameManager gameManager;
+    public bool inAttack;
+
 
     void Start()
     {
@@ -17,9 +19,46 @@ public class EnemyAttack : MonoBehaviour
             factsSaid.Add(false);
         }
     }
+    
+    void Update()
+    {
+        if(inAttack && GetComponent<Animator>().GetNextAnimatorStateInfo(0).IsName("Idle"))
+        {
+            if (Random.Range(0,1f) <= activeAttackObject.accuracy)
+            {
+                // Attack hits
+                if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
+                {
+                    // Critical hit
+                    int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
+                    Debug.Log("Critical hit! " + damage + " damage dealt.");
+                    gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
+                    playerHealth.RemoveHealth(damage);
+                }
+                else
+                {
+                    // Normal hit
+                    Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
+                    gameManager.QueueLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
+                    playerHealth.RemoveHealth(activeAttackObject.baseDamage);
+                }
+            }
+            else
+            {
+                // Attack misses
+                Debug.Log("Attack misses!");
+                gameManager.QueueLog("Attack misses! 0 damage dealt.");
+            }
+
+            inAttack = false;
+        }
+    }
 
     public void UseAttack()
     {
+
+        inAttack = true; 
+
         int attackIndex = Random.Range(0, attackObjects.Count);
 
         activeAttackObject = attackObjects[attackIndex];
@@ -30,38 +69,7 @@ public class EnemyAttack : MonoBehaviour
             factsSaid[attackIndex] = true;
         }
 
-        if(activeAttackObject.animation != null)
-        {
-            activeAttackObject.animation.Play();
-        }
-
-        if (Random.Range(0,1f) <= activeAttackObject.accuracy)
-        {
-            // Attack hits
-            if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
-            {
-                // Critical hit
-                int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
-                Debug.Log("Critical hit! " + damage + " damage dealt.");
-                gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
-                playerHealth.RemoveHealth(damage);
-            }
-            else
-            {
-                // Normal hit
-                Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                gameManager.QueueLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                playerHealth.RemoveHealth(activeAttackObject.baseDamage);
-            }
-        }
-        else
-        {
-            // Attack misses
-            Debug.Log("Attack misses!");
-            gameManager.QueueLog("Attack misses! 0 damage dealt.");
-        }
-
-        gameManager.EndEnemyTurn();
+        GetComponent<Animator>().SetTrigger(activeAttackObject.type);
     }
 
 }

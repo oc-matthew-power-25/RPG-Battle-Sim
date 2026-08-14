@@ -36,6 +36,10 @@ public class PlayerHealth : MonoBehaviour
         {
             OnDeath();
         }
+        else
+        {
+            GetComponent<Animator>().SetTrigger("Damaged");
+        }
     }
 
     void OnDeath()

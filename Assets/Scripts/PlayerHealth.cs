@@ -44,6 +44,7 @@ public class PlayerHealth : MonoBehaviour
 
     void OnDeath()
     {
+        GetComponent<Animator>().SetTrigger("Death");
         gameManager.QueueLog("You Lost.");
         gameManager.endQueued = true;
     }

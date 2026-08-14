@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
                 if(textQueue.Count == 0 && endQueued)
                 {
-                    Time.timeScale = 0f;
+                    //Time.timeScale = 0f;
                     logText.transform.GetChild(0).gameObject.SetActive(false);
                     isEnd = true;
                 }
@@ -72,7 +72,6 @@ public class GameManager : MonoBehaviour
     {
         isPlayerTurn = true;
         playerCanAttack = true;
-        Debug.Log("Enemy turn ended. Player's turn begins.");
     }
 
     public void StartEnemyTurn()

@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth = 100;
     public Text healthText;
     public GameManager gameManager;
+    public string species;
 
     void Start ()
     {
@@ -44,6 +45,8 @@ public class EnemyHealth : MonoBehaviour
 
     void OnDeath()
     {
+        GetComponent<Animator>().SetTrigger("Death");
+        gameManager.QueueLog("The " + species + " fled from the battle and returned to its habitat.");
         gameManager.QueueLog("You Won.");
         gameManager.endQueued = true;
     }

@@ -17,26 +17,32 @@ public class PlayerAttack : MonoBehaviour
             if (Random.Range(0,1f) <= activeAttackObject.accuracy)
             {
                 // Attack hits
+                float attackMulti = (float)GetComponent<PlayerData>().attackStat / 100f;
+                float enemyDefense = 1f-((float)enemyHealth.GetComponent<EnemyData>().defenseStat / 100f);
+                if(activeAttackObject.type == enemyHealth.GetComponent<EnemyData>().strength)
+                {
+                    enemyDefense *= 0.5f;
+                    gameManager.QueueLog("The " + enemyHealth.species + " is strong against " + activeAttackObject.type + " attacks.");
+                }
+
+                int damage = (int)(float)(activeAttackObject.baseDamage * attackMulti * enemyDefense);
                 if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
                 {
                     // Critical hit
-                    int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
-                    Debug.Log("Critical hit! " + damage + " damage dealt.");
+                    damage = (int)(float)(damage * criticalMultiplier);
                     gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
                     enemyHealth.RemoveHealth(damage);
                 }
                 else
                 {
                     // Normal hit
-                    Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                    gameManager.QueueLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                    enemyHealth.RemoveHealth(activeAttackObject.baseDamage);
+                    gameManager.QueueLog(damage + " damage dealt.");
+                    enemyHealth.RemoveHealth(damage);
                 }
             }
             else
             {
                 // Attack misses
-                Debug.Log("Attack misses!");
                 gameManager.QueueLog("Attack misses! 0 damage dealt.");
             }
 

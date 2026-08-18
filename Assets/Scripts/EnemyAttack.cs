@@ -27,20 +27,21 @@ public class EnemyAttack : MonoBehaviour
             if (Random.Range(0,1f) <= activeAttackObject.accuracy)
             {
                 // Attack hits
+                float attackMulti = (float)GetComponent<EnemyData>().attackStat / 100f;
+                float enemyDefense = 1f-((float)playerHealth.GetComponent<PlayerData>().defenseStat / 100f);
+                int damage = (int)(float)(activeAttackObject.baseDamage * attackMulti * enemyDefense);
                 if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
                 {
                     // Critical hit
-                    int damage = (int)(float)(activeAttackObject.baseDamage * criticalMultiplier);
-                    Debug.Log("Critical hit! " + damage + " damage dealt.");
+                    damage = (int)(float)(damage * criticalMultiplier);
                     gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
                     playerHealth.RemoveHealth(damage);
                 }
                 else
                 {
                     // Normal hit
-                    Debug.Log("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                    gameManager.QueueLog("Normal hit! " + activeAttackObject.baseDamage + " damage dealt.");
-                    playerHealth.RemoveHealth(activeAttackObject.baseDamage);
+                    gameManager.QueueLog(damage + " damage dealt.");
+                    playerHealth.RemoveHealth(damage);
                 }
             }
             else

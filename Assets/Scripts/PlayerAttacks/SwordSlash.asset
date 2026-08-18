@@ -17,3 +17,4 @@ MonoBehaviour:
   criticalChance: 0.1
   type: Melee
   attackName: Sword Slash
+  sfx: {fileID: 8300000, guid: 369269916856a656181cdc2f4f099f01, type: 3}

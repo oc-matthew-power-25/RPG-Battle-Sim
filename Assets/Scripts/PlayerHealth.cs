@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth = 100;
     public Text healthText;
     public GameManager gameManager;
+    public AudioClip damageSFX;
 
     void Start ()
     {
@@ -39,6 +40,8 @@ public class PlayerHealth : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetTrigger("Damaged");
+            GetComponent<AudioSource>().clip = damageSFX;
+            GetComponent<AudioSource>().Play();
         }
     }
 

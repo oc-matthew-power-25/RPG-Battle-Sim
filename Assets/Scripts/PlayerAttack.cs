@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -67,6 +68,10 @@ public class PlayerAttack : MonoBehaviour
         gameManager.QueueLog("Player Used " + activeAttackObject.attackName + "!");
 
         GetComponent<Animator>().SetTrigger(activeAttackObject.type);
+
+        transform.GetComponent<AudioSource>().clip = activeAttackObject.sfx;
+        GetComponent<AudioSource>().volume = 0.8f;
+        GetComponent<AudioSource>().Play();
         
         gameManager.playerCanAttack = false;
     }

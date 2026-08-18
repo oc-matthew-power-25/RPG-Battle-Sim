@@ -17,3 +17,4 @@ MonoBehaviour:
   criticalChance: 0.5
   type: Ranged
   attackName: Quick Shot
+  sfx: {fileID: 8300000, guid: 6ba12e81031a5709c976bdf4f68ce755, type: 3}

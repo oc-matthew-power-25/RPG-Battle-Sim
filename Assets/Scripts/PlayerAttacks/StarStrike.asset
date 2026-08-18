@@ -17,3 +17,4 @@ MonoBehaviour:
   criticalChance: 0.2
   type: Magic
   attackName: Star Strike
+  sfx: {fileID: 8300000, guid: b2a65c2295bbe617bac6b8db43c3f9ca, type: 3}

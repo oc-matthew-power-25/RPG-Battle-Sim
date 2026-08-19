@@ -8,6 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public Text healthText;
     public GameManager gameManager;
     public string species;
+    public AudioClip damageSFX;
 
     void Start ()
     {
@@ -40,6 +41,8 @@ public class EnemyHealth : MonoBehaviour
         else
         {
             GetComponent<Animator>().SetTrigger("Damaged");
+            GetComponent<AudioSource>().clip = damageSFX;
+            GetComponent<AudioSource>().Play();
         }
     }
 

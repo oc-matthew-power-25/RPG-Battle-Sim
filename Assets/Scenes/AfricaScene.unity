@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Capybara
+  m_Text: Lion
 --- !u!222 &132574734
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2429,7 +2429,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 582321688951060525, guid: f3078f0a21500038a86641cea0c28e80, type: 3}
+  m_Sprite: {fileID: -2295827043839239567, guid: f3078f0a21500038a86641cea0c28e80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2467,11 +2467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370d7a58caa2e6a75bf84e56bd8e30f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 80
-  currentHealth: 80
+  maxHealth: 120
+  currentHealth: 120
   healthText: {fileID: 1568206542}
   gameManager: {fileID: 349565021}
-  species: Capybara
+  species: Lion
   damageSFX: {fileID: 8300000, guid: 15a7f53a2f1cf309297828308c8bc4a9, type: 3}
 --- !u!114 &1655943631
 MonoBehaviour:
@@ -2486,8 +2486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackObjects:
-  - {fileID: 11400000, guid: 57f7b21ee91b28e3baaa06ff14abf6f4, type: 2}
-  - {fileID: 11400000, guid: d0ccdce42ace7be93850088f7e9315c5, type: 2}
+  - {fileID: 11400000, guid: 786e95c1d17060559bf7ff098862c38f, type: 2}
   factsSaid: 
   playerHealth: {fileID: 772589939}
   criticalMultiplier: 1.6
@@ -2505,7 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25d4518aa49ff0caf74a6187f83af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  attackStat: 30
+  attackStat: 95
   defenseStat: 50
   strength: Ranged
 --- !u!82 &1655943634
@@ -2615,7 +2614,7 @@ Animator:
   m_GameObject: {fileID: 1655943627}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dec56e1c4309744569fd9347993e7082, type: 2}
+  m_Controller: {fileID: 9100000, guid: f9b49a085487ab45886df6f45a0d11e9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

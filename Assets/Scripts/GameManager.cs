@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -65,6 +66,24 @@ public class GameManager : MonoBehaviour
         if(!playerCanAttack && playerAttackButtons.activeSelf)
         {
             playerAttackButtons.SetActive(false);
+        }
+
+         // Scene switching
+        if(Keyboard.current.f1Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(0);
+        }
+        if(Keyboard.current.f2Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(1);
+        }
+        if(Keyboard.current.f3Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(2);
+        }
+        if(Keyboard.current.f4Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(3);
         }
     }
 

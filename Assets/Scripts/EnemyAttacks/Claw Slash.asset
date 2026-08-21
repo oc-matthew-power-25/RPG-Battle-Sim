@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc60393b34a3e7d2e94d0dbece4dc7bd, type: 3}
-  m_Name: Pounce
+  m_Name: Claw Slash
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackObject
-  accuracy: 0.8
-  baseDamage: 25
-  criticalChance: 0.1
-  type: Ranged
-  attackName: Pounce
-  funFact: Lions can jump up to 11m horizontally.
+  accuracy: 0.9
+  baseDamage: 20
+  criticalChance: 0.2
+  type: Melee
+  attackName: Claw Slash
+  funFact: Lion claws stay hidden in fur to avoid wear and tear.

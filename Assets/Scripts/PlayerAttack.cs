@@ -10,44 +10,36 @@ public class PlayerAttack : MonoBehaviour
     public float criticalMultiplier = 2f;
     public GameManager gameManager;
     public bool inAttack;
+    private bool attackAnimationStarted;
 
     void Update()
     {
-        if(inAttack && GetComponent<Animator>().GetNextAnimatorStateInfo(0).IsName("PlayerIdle"))
+
+        AnimatorStateInfo state = GetComponent<Animator>().GetCurrentAnimatorStateInfo(0);
+
+        if (inAttack)
         {
-            if (Random.Range(0,1f) <= activeAttackObject.accuracy)
+            // Wait until we actually enter the attack animation
+            if (!state.IsName("Idle") && !state.IsName("PlayerDamaged"))
             {
-                // Attack hits
-                float attackMulti = (float)GetComponent<PlayerData>().attackStat / 100f;
-                float enemyDefense = 1f-((float)enemyHealth.GetComponent<EnemyData>().defenseStat / 100f);
-                if(activeAttackObject.type == enemyHealth.GetComponent<EnemyData>().strength)
-                {
-                    enemyDefense *= 0.5f;
-                    gameManager.QueueLog("The " + enemyHealth.species + " is strong against " + activeAttackObject.type + " attacks.");
-                }
-
-                int damage = (int)(float)(activeAttackObject.baseDamage * attackMulti * enemyDefense);
-                if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
-                {
-                    // Critical hit
-                    damage = (int)(float)(damage * criticalMultiplier);
-                    gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
-                    enemyHealth.RemoveHealth(damage);
-                }
-                else
-                {
-                    // Normal hit
-                    gameManager.QueueLog(damage + " damage dealt.");
-                    enemyHealth.RemoveHealth(damage);
-                }
-            }
-            else
-            {
-                // Attack misses
-                gameManager.QueueLog("Attack misses! 0 damage dealt.");
+                attackAnimationStarted = true;
             }
 
-            inAttack = false;
+            // Once the attack animation has finished and we're back to Idle
+            if (attackAnimationStarted && state.IsName("Idle"))
+            {
+                DealDamage();
+
+                inAttack = false;
+                attackAnimationStarted = false;
+            }
+        }
+
+        if(inAttack && GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            
+            //DealDamage();
+            //inAttack = false;
         }
     }
 
@@ -74,5 +66,40 @@ public class PlayerAttack : MonoBehaviour
         GetComponent<AudioSource>().Play();
         
         gameManager.playerCanAttack = false;
+    }
+
+    private void DealDamage()
+    {
+        if (Random.Range(0,1f) <= activeAttackObject.accuracy)
+        {
+            // Attack hits
+            float attackMulti = (float)GetComponent<PlayerData>().attackStat / 100f;
+            float enemyDefense = 1f-((float)enemyHealth.GetComponent<EnemyData>().defenseStat / 100f);
+            if(activeAttackObject.type == enemyHealth.GetComponent<EnemyData>().strength)
+            {
+                enemyDefense *= 0.5f;
+                gameManager.QueueLog("The " + enemyHealth.species + " is strong against " + activeAttackObject.type + " attacks.");
+            }
+
+            int damage = (int)(float)(activeAttackObject.baseDamage * attackMulti * enemyDefense);
+            if(Random.Range(0,1f) <= activeAttackObject.criticalChance)
+            {
+                // Critical hit
+                damage = (int)(float)(damage * criticalMultiplier);
+                gameManager.QueueLog("Critical hit! " + damage + " damage dealt.");
+                enemyHealth.RemoveHealth(damage);
+            }
+            else
+            {
+                // Normal hit
+                gameManager.QueueLog(damage + " damage dealt.");
+                enemyHealth.RemoveHealth(damage);
+            }
+        }
+        else
+        {
+            // Attack misses
+            gameManager.QueueLog("Attack misses! 0 damage dealt.");
+        }
     }
 }

@@ -849,9 +849,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee289edda07c3e0bad25cbe27fe016e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startPos: {x: 8, y: 5, z: -10}
+  startPos: {x: 4, y: 1.85, z: -10}
   endPos: {x: 0, y: 0, z: -10}
-  startSize: 10
+  startSize: 8
   endSize: 5
   duration: 2
   canvas: {fileID: 220567462}
@@ -2487,7 +2487,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   attackObjects:
   - {fileID: 11400000, guid: 786e95c1d17060559bf7ff098862c38f, type: 2}
-  - {fileID: 11400000, guid: 5dcfa119f1dff1dc2b083552ba4daf06, type: 2}
   factsSaid: 
   playerHealth: {fileID: 772589939}
   criticalMultiplier: 1.6
@@ -2772,7 +2771,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 20c7ec1939344586ea2f5519d5d72249, type: 3}
+  m_Sprite: {fileID: -21357841802768676, guid: 7d6c42a14e6aa086384fb9ad2ab24cb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2792,8 +2791,8 @@ Transform:
   m_GameObject: {fileID: 1802165098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 6, z: 10}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 4, y: 2, z: 10}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

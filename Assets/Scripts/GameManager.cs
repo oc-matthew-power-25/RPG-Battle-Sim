@@ -85,6 +85,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(3);
         }
+        if(Keyboard.current.f5Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(4);   
+        }
     }
 
     public void StartPlayerTurn()

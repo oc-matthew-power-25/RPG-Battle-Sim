@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EuropeScene.unity
     guid: cec654b7586000682bfc3bb08abf8de7
+  - enabled: 1
+    path: Assets/Scenes/AsiaScene.unity
+    guid: 1a450ab68f22320a7b83ab34f5deedfc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

@@ -288,7 +288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1162112331168109523, guid: d6db2dc2c17ec7706af0f84421f026b4, type: 3}
       propertyPath: m_Text
-      value: Lion
+      value: Tiger
       objectReference: {fileID: 0}
     - target: {fileID: 4953181831244178511, guid: d6db2dc2c17ec7706af0f84421f026b4, type: 3}
       propertyPath: m_Name
@@ -593,7 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee289edda07c3e0bad25cbe27fe016e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  startPos: {x: 0, y: 5, z: -10}
+  startPos: {x: 7, y: 5, z: -10}
   endPos: {x: 0, y: 0, z: -10}
   startSize: 10
   endSize: 5
@@ -1042,7 +1042,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2295827043839239567, guid: f3078f0a21500038a86641cea0c28e80, type: 3}
+  m_Sprite: {fileID: -27541428, guid: f3078f0a21500038a86641cea0c28e80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1080,11 +1080,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370d7a58caa2e6a75bf84e56bd8e30f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 120
-  currentHealth: 120
+  maxHealth: 90
+  currentHealth: 90
   healthText: {fileID: 477655893}
   gameManager: {fileID: 349565021}
-  species: Lion
+  species: Tiger
   damageSFX: {fileID: 8300000, guid: 15a7f53a2f1cf309297828308c8bc4a9, type: 3}
 --- !u!114 &1655943631
 MonoBehaviour:
@@ -1099,8 +1099,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackObjects:
-  - {fileID: 11400000, guid: 786e95c1d17060559bf7ff098862c38f, type: 2}
-  - {fileID: 11400000, guid: 5dcfa119f1dff1dc2b083552ba4daf06, type: 2}
+  - {fileID: 11400000, guid: 88eeb2d4a0a5b7659af5d9c11563a985, type: 2}
+  - {fileID: 11400000, guid: 46994da34e0ac437592a78a8f5c4ddf7, type: 2}
   factsSaid: 
   playerHealth: {fileID: 772589939}
   criticalMultiplier: 1.6
@@ -1118,8 +1118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25d4518aa49ff0caf74a6187f83af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  attackStat: 95
-  defenseStat: 50
+  attackStat: 90
+  defenseStat: 45
   strength: Ranged
 --- !u!82 &1655943634
 AudioSource:
@@ -1385,12 +1385,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 20c7ec1939344586ea2f5519d5d72249, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc67f1a50be38f87a921e3cbe12a2c1e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 18, y: 10.125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1405,7 +1405,7 @@ Transform:
   m_GameObject: {fileID: 1802165098}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6, z: 10}
+  m_LocalPosition: {x: 7, y: 5, z: 10}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

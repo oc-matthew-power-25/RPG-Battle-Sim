@@ -757,13 +757,13 @@ TextureImporter:
       name: animals_18
       rect:
         serializedVersion: 2
-        x: 191
+        x: 192
         y: 384
-        width: 34
+        width: 32
         height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 1, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -779,13 +779,13 @@ TextureImporter:
       name: animals_19
       rect:
         serializedVersion: 2
-        x: 223
+        x: 224
         y: 384
-        width: 33
+        width: 32
         height: 23
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -2280,7 +2280,7 @@ TextureImporter:
         width: 32
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

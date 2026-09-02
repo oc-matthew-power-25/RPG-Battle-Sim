@@ -89,6 +89,18 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(4);   
         }
+        if(Keyboard.current.f6Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(5);   
+        }
+        if(Keyboard.current.f7Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(6);   
+        }
+        if(Keyboard.current.f8Key.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(7);   
+        }
     }
 
     public void StartPlayerTurn()

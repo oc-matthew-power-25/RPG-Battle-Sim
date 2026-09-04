@@ -1396,8 +1396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25d4518aa49ff0caf74a6187f83af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  attackStat: 30
-  defenseStat: 65
+  attackStat: 40
+  defenseStat: 55
   strength: Melee
 --- !u!82 &1655943634
 AudioSource:

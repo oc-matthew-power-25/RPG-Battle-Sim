@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 91895050}
   - component: {fileID: 91895049}
   - component: {fileID: 91895052}
+  - component: {fileID: 91895053}
   m_Layer: 5
   m_Name: South America
   m_TagString: Untagged
@@ -432,6 +433,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &91895053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91895047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 4
 --- !u!1 &114277705
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +535,7 @@ GameObject:
   - component: {fileID: 130643364}
   - component: {fileID: 130643363}
   - component: {fileID: 130643366}
+  - component: {fileID: 130643367}
   m_Layer: 5
   m_Name: Australia
   m_TagString: Untagged
@@ -616,6 +632,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &130643367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130643361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 6
 --- !u!1 &270710877
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1012,7 @@ GameObject:
   - component: {fileID: 443299208}
   - component: {fileID: 443299207}
   - component: {fileID: 443299210}
+  - component: {fileID: 443299211}
   m_Layer: 5
   m_Name: Europe
   m_TagString: Untagged
@@ -1080,6 +1111,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &443299211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443299205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 2
 --- !u!1 &590252951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1138,7 @@ GameObject:
   - component: {fileID: 590252954}
   - component: {fileID: 590252953}
   - component: {fileID: 590252956}
+  - component: {fileID: 590252957}
   m_Layer: 5
   m_Name: North America
   m_TagString: Untagged
@@ -1189,6 +1235,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &590252957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590252951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 1
 --- !u!1 &603028984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1420,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 388582335}
+  - {fileID: 1733098999}
   - {fileID: 590252952}
   - {fileID: 443299206}
   - {fileID: 780613695}
@@ -1679,6 +1740,7 @@ GameObject:
   - component: {fileID: 701705323}
   - component: {fileID: 701705322}
   - component: {fileID: 701705325}
+  - component: {fileID: 701705326}
   m_Layer: 5
   m_Name: Africa
   m_TagString: Untagged
@@ -1775,6 +1837,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &701705326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701705320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 5
 --- !u!1 &769221906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1901,7 @@ GameObject:
   - component: {fileID: 780613697}
   - component: {fileID: 780613696}
   - component: {fileID: 780613699}
+  - component: {fileID: 780613700}
   m_Layer: 5
   m_Name: Asia
   m_TagString: Untagged
@@ -1921,6 +1998,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &780613700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780613694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 3
 --- !u!1 &784866565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,7 +3696,6 @@ GameObject:
   - component: {fileID: 1394686041}
   - component: {fileID: 1394686040}
   - component: {fileID: 1394686043}
-  - component: {fileID: 1394686044}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3731,21 +3821,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1394686044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394686039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2a0e4cb359984398b9fa0456d218d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  mapSize: {x: 127, y: 99}
-  cameraSize: {x: 0, y: 0}
-  maxCoords: {x: 0, y: 0}
 --- !u!1 &1560833708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +3909,7 @@ GameObject:
   - component: {fileID: 1591514552}
   - component: {fileID: 1591514551}
   - component: {fileID: 1591514554}
+  - component: {fileID: 1591514555}
   m_Layer: 5
   m_Name: Antarctica
   m_TagString: Untagged
@@ -3930,6 +4006,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef44b52de1dd5ca184bd2d4e658c662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIHoverEffect
+  hoverColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
+--- !u!114 &1591514555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591514549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c87f3c0e4f5eb52086d362bdea40b76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  nextScene: 7
 --- !u!1 &1599127893
 GameObject:
   m_ObjectHideFlags: 0
@@ -4148,6 +4238,101 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718961308}
+  m_CullTransparentMesh: 1
+--- !u!1 &1733098998
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733098999}
+  - component: {fileID: 1733099004}
+  - component: {fileID: 1733099003}
+  - component: {fileID: 1733099002}
+  m_Layer: 5
+  m_Name: Battle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1733098999
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733098998}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 632291031}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 400}
+  m_SizeDelta: {x: 1000, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1733099002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733098998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 12, y: 12}
+  m_UseGraphicAlpha: 1
+--- !u!114 &1733099003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733098998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 7bb5bd80d2d2ea7d68119f9c03e9dab2, type: 3}
+    m_FontSize: 130
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 140
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1.5
+  m_Text: Battle
+--- !u!222 &1733099004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733098998}
   m_CullTransparentMesh: 1
 --- !u!1 &1760451018
 GameObject:

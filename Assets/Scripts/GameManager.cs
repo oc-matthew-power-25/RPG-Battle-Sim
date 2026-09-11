@@ -18,6 +18,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if(isEnd && Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene(0);
+        }
 
         if(logText.text == "" && textQueue.Count > 0)
         {
@@ -49,7 +53,7 @@ public class GameManager : MonoBehaviour
                 if(textQueue.Count == 0 && endQueued)
                 {
                     //Time.timeScale = 0f;
-                    logText.transform.GetChild(0).gameObject.SetActive(false);
+                    //logText.transform.GetChild(0).gameObject.SetActive(false);
                     isEnd = true;
                 }
             }
@@ -114,11 +118,6 @@ public class GameManager : MonoBehaviour
         isPlayerTurn = false;
         Debug.Log("Player turn ended. Enemy's turn begins.");
         FindAnyObjectByType<EnemyAttack>().UseAttack();
-    }
-
-    public void ResetScene()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     public void QueueLog(string text)

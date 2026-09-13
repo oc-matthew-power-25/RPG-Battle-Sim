@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public bool playerCanAttack = true;
     public GameObject playerAttackButtons;
 
+    public int turnNumber = 0;
+
     public Text logText;
     public List<String> textQueue;
     public bool endQueued = false;
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
         if(playerCanAttack && !playerAttackButtons.activeSelf && FindAnyObjectByType<PlayerAttack>().inAttack == false && FindAnyObjectByType<EnemyAttack>().inAttack == false)
         {
             playerAttackButtons.SetActive(true);
+            turnNumber ++;
         }
         if(!playerCanAttack && playerAttackButtons.activeSelf)
         {

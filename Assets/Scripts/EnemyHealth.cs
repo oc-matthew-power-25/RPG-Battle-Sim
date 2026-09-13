@@ -28,9 +28,17 @@ public class EnemyHealth : MonoBehaviour
     public void RemoveHealth(int amount)
     {
         currentHealth -= amount;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
-            currentHealth = 0;
+            if(gameManager.turnNumber == 0)
+            {
+                currentHealth = 1;
+                gameManager.QueueLog("But the " + species + " Survived on 1 Health.");
+            }
+            else
+            {
+                currentHealth = 0;
+            }
         }
         healthText.text = "HP: " + currentHealth + "/" + maxHealth;
         

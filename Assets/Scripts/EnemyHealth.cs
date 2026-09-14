@@ -13,6 +13,10 @@ public class EnemyHealth : MonoBehaviour
     void Start ()
     {
         healthText.text = "HP: " + currentHealth + "/" + maxHealth;
+        if(PlayerPrefs.GetInt(species + "Defeated") != 1){
+            PlayerPrefs.SetInt(species + "Defeated", 0);
+            PlayerPrefs.Save();
+        }
     }
 
     public void AddHealth(int amount)
@@ -60,5 +64,8 @@ public class EnemyHealth : MonoBehaviour
         gameManager.QueueLog("The " + species + " fled from the battle and returned to its habitat.");
         gameManager.QueueLog("You Won.");
         gameManager.endQueued = true;
+
+        PlayerPrefs.SetInt(species + "Defeated", 1);
+        PlayerPrefs.Save();
     }
 }

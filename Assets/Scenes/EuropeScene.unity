@@ -183,6 +183,7 @@ MonoBehaviour:
   isPlayerTurn: 1
   playerCanAttack: 1
   playerAttackButtons: {fileID: 1928633058}
+  turnNumber: 0
   logText: {fileID: 1227614764}
   textQueue: []
   endQueued: 0

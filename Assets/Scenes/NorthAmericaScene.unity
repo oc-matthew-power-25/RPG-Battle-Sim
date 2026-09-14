@@ -178,6 +178,7 @@ MonoBehaviour:
   isPlayerTurn: 1
   playerCanAttack: 1
   playerAttackButtons: {fileID: 477655891}
+  turnNumber: 0
   logText: {fileID: 136078699}
   textQueue: []
   endQueued: 0
@@ -1080,8 +1081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 370d7a58caa2e6a75bf84e56bd8e30f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 110
+  currentHealth: 110
   healthText: {fileID: 477655893}
   gameManager: {fileID: 349565021}
   species: Bison
@@ -1119,7 +1120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackStat: 60
-  defenseStat: 45
+  defenseStat: 50
   strength: Melee
 --- !u!82 &1655943634
 AudioSource:

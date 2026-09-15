@@ -65,7 +65,7 @@ public class EnemyHealth : MonoBehaviour
         gameManager.QueueLog("You Won.");
         gameManager.endQueued = true;
 
-        if(PlayerPrefs.GetInt(species + "Defeated") != 0){
+        if(PlayerPrefs.GetInt(species + "Defeated") != 1){
             PlayerPrefs.SetInt(species + "Defeated", 1);
             int stars = PlayerPrefs.GetInt("Stars");
             stars += GetComponent<EnemyData>().stars;

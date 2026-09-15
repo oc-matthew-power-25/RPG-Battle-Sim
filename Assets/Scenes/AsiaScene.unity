@@ -1122,7 +1122,7 @@ MonoBehaviour:
   attackStat: 90
   defenseStat: 45
   strength: Ranged
-  stars: 4
+  stars: 3
 --- !u!82 &1655943634
 AudioSource:
   m_ObjectHideFlags: 0

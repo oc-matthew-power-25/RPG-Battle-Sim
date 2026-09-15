@@ -1119,7 +1119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b25d4518aa49ff0caf74a6187f83af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  attackStat: 60
+  attackStat: 65
   defenseStat: 50
   strength: Melee
   stars: 4

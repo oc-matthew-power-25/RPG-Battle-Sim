@@ -702,7 +702,7 @@ MonoBehaviour:
   currentHealth: 100
   healthText: {fileID: 1568206542}
   gameManager: {fileID: 349565021}
-  species: Black Bear
+  species: Brown Bear
   damageSFX: {fileID: 8300000, guid: 15a7f53a2f1cf309297828308c8bc4a9, type: 3}
 --- !u!114 &1655943631
 MonoBehaviour:

@@ -10,16 +10,25 @@ public class CurrentStats : MonoBehaviour
     public int attack;
     public int hp;
     public int defense;
+    public int stars;
 
     public Text attackText;
     public Text hpText;
     public Text defenseText;
+    public Text starsText;
 
     void Start()
+    {
+        Refresh();
+    }
+
+    public void Refresh()
     {
         attackLevel = PlayerPrefs.GetInt("AttackLevel");
         hpLevel = PlayerPrefs.GetInt("HPLevel");
         defenseLevel = PlayerPrefs.GetInt("DefenseLevel");
+
+        stars = PlayerPrefs.GetInt("Stars");
 
         if(attackLevel == 0)attack = 65;
         if(attackLevel == 1)attack = 70;
@@ -45,5 +54,6 @@ public class CurrentStats : MonoBehaviour
         attackText.text = attack.ToString();
         hpText.text = hp.ToString();
         defenseText.text = defense.ToString();
+        starsText.text = stars.ToString();
     }
 }

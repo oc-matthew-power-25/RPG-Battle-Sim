@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   attackStat: 95
   defenseStat: 50
-  strength: Ranged
+  strength: Magic
   stars: 5
 --- !u!82 &1655943634
 AudioSource:

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc60393b34a3e7d2e94d0dbece4dc7bd, type: 3}
   m_Name: Headbutt
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttackObject
-  accuracy: 0.7
+  accuracy: 0.75
   baseDamage: 40
   criticalChance: 0.1
   type: Melee

@@ -167,6 +167,7 @@ MonoBehaviour:
   isPlayerTurn: 1
   playerCanAttack: 1
   playerAttackButtons: {fileID: 1977268599}
+  turnNumber: 0
   logText: {fileID: 1977268598}
   textQueue: []
   endQueued: 0
@@ -967,6 +968,7 @@ MonoBehaviour:
   attackStat: 30
   defenseStat: 50
   strength: Ranged
+  stars: 1
 --- !u!82 &1655943634
 AudioSource:
   m_ObjectHideFlags: 0

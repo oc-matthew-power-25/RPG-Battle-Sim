@@ -13,10 +13,14 @@ public class Mute : MonoBehaviour
         if(isMuted)
         {
             icon.sprite = mutedIcon;
+            GetComponent<Text>().text = "Unmute";
+            icon.rectTransform.localPosition = new Vector3(210, 0, 0);
         }
         else if(!isMuted)
         {
             icon.sprite = unmutedIcon;
+            GetComponent<Text>().text = "Mute";
+            icon.rectTransform.localPosition = new Vector3(110, 0, 0);
         }
     }
 
@@ -26,12 +30,16 @@ public class Mute : MonoBehaviour
         if(isMuted)
         {
             icon.sprite = unmutedIcon;
+            GetComponent<Text>().text = "Mute";
+            icon.rectTransform.localPosition = new Vector3(110, 0, 0);
             PlayerPrefs.SetInt("Muted", 0);
             PlayerPrefs.Save();
         }
         else if(!isMuted)
         {
             icon.sprite = mutedIcon;
+            GetComponent<Text>().text = "Unmute";
+            icon.rectTransform.localPosition = new Vector3(210, 0, 0);
             PlayerPrefs.SetInt("Muted", 1);
             PlayerPrefs.Save();
         }

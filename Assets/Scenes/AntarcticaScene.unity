@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   attackStat: 40
-  defenseStat: 55
+  defenseStat: 45
   strength: Melee
   stars: 1
 --- !u!82 &1655943634

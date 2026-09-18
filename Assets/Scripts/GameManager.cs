@@ -74,40 +74,6 @@ public class GameManager : MonoBehaviour
         {
             playerAttackButtons.SetActive(false);
         }
-
-         // Scene switching
-        if(Keyboard.current.f1Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(0);
-        }
-        if(Keyboard.current.f2Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(1);
-        }
-        if(Keyboard.current.f3Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(2);
-        }
-        if(Keyboard.current.f4Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(3);
-        }
-        if(Keyboard.current.f5Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(4);   
-        }
-        if(Keyboard.current.f6Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(5);   
-        }
-        if(Keyboard.current.f7Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(6);   
-        }
-        if(Keyboard.current.f8Key.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene(7);   
-        }
     }
 
     public void StartPlayerTurn()

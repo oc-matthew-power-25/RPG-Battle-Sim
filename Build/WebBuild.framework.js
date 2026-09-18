@@ -84,11 +84,11 @@ var ENVIRONMENT_IS_SHELL = false;
 
 // --pre-jses are emitted after the Module integration code, so that they can
 // refer to Module (if they choose; they can also define Module)
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/UserJsprePlaceholder.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/UserJsprePlaceholder.js
 
 
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/UserJsprePlaceholder.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/AnimationFrameRate.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/UserJsprePlaceholder.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/AnimationFrameRate.js
 let screenAnimationFrameRate = 60;
 
 (function() {
@@ -138,8 +138,8 @@ let screenAnimationFrameRate = 60;
         }
     };
 })();
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/AnimationFrameRate.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/Error.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/AnimationFrameRate.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/Error.js
 var abort = function (what) {
   if (ABORT)
     return;
@@ -161,8 +161,8 @@ var abort = function (what) {
     return;
   throw message;
 }
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/Error.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/FullScreen.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/Error.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/FullScreen.js
 Module["SetFullscreen"] = function (fullscreen) {
   if (typeof runtimeInitialized === 'undefined' || !runtimeInitialized) {
     console.log ("Runtime not initialized yet.");
@@ -175,8 +175,8 @@ Module["SetFullscreen"] = function (fullscreen) {
     JSEvents.canPerformEventHandlerRequests = tmp;
   }
 };
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/FullScreen.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/IdbFs.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/FullScreen.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/IdbFs.js
 if (typeof ENVIRONMENT_IS_PTHREAD === 'undefined' || !ENVIRONMENT_IS_PTHREAD) {
   if (!Module['preRun']) Module['preRun'] = [];
   Module['preRun'].push(function () {
@@ -280,8 +280,8 @@ if (typeof ENVIRONMENT_IS_PTHREAD === 'undefined' || !ENVIRONMENT_IS_PTHREAD) {
     unityFileSystemInit();
   });
 }
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/IdbFs.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/MediaDevices.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/IdbFs.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/MediaDevices.js
 var videoInputDevices = []; // Set to null to disable video input devices altogether.
 // Track whether we have been able to enumerate media devices successfully at least once. Used
 // by JS_WebCamVideo_GetNumDevices() to detect if we are clear of the browser spec issue
@@ -458,8 +458,8 @@ if (typeof ENVIRONMENT_IS_PTHREAD === 'undefined' || !ENVIRONMENT_IS_PTHREAD) {
 		}
 	}, 0);
 }
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/MediaDevices.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/PlayerConnection.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/MediaDevices.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/PlayerConnection.js
 Module["ConnectToProfiler"] = function (ipAndPort) {
   const ipAndPortCstr = stringToNewUTF8(ipAndPort);
   _ConnectToProfiler(ipAndPortCstr);
@@ -471,8 +471,8 @@ Module["StopProfiling"] = function () {
 Module["IsConnectedToProfiler"] = function () {
   return !!_IsConnectedToProfiler();
 };
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/PlayerConnection.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/SendMessage.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/PlayerConnection.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/SendMessage.js
 function SendMessage(gameObject, func, param) {
     var func_cstr = stringToNewUTF8(func);
     var gameObject_cstr = stringToNewUTF8(gameObject);
@@ -498,8 +498,8 @@ function SendMessage(gameObject, func, param) {
 }
 // Export SendMessage out from the JS module via the Module export object
 Module["SendMessage"] = SendMessage;
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/SendMessage.js
-// include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/WebPlayerInitilization.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/SendMessage.js
+// include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/WebPlayerInitilization.js
 // Create a promise that is resolved later when "RunWebGLPlayer" was run
 // We can ignore the reject handler as the UnityLoader registers a global startupErrorHandler
 var _resolvePlayerIsInitialized;
@@ -516,7 +516,7 @@ Module["WebPlayer"] = {
     PlayerIsInitialized: _resolvePlayerIsInitialized,
     WaitForInitialization: _WaitForInitialization,
 };
-// end include: /home/matthewp/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/WebPlayerInitilization.js
+// end include: /home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport/BuildTools/prejs/WebPlayerInitilization.js
 
 
 var arguments_ = [];

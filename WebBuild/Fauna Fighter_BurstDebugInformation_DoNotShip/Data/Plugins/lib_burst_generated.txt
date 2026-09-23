@@ -10,7 +10,6 @@ Library: /home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/BurstOutput/Da
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/Burst
---debug=Full
 --generate-static-linkage-methods
 --key-folder=/home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport
 --decode-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Library/Burst
@@ -128,7 +127,6 @@ Library: /home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/BurstOutput/Da
 --target-framework=NetFramework
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/Burst
---debug=Full
 --generate-static-linkage-methods
 --key-folder=/home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport
 --decode-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Library/Burst
@@ -170,7 +168,6 @@ Library: /home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/BurstOutput/Da
 --float-mode=Fast
 --generate-link-xml=Temp/burst.link.xml
 --temp-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Temp/Burst
---debug=Full
 --generate-static-linkage-methods
 --key-folder=/home/matthewschool/Unity/Hub/Editor/6000.5.5f1/Editor/Data/PlaybackEngines/WebGLSupport
 --decode-folder=/home/matthewschool/Documents/GitHub/RPG Battle Sim/Library/Burst
